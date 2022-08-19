@@ -1,3 +1,15 @@
+<?php
+    if(isset($_POST['submit'])){
+        $string = $_POST['string'];
+        $reverse_string = strrev($string);
+
+        print '<scirpt>
+            var myVar;
+            myVar = "'.$reverse_string.'"
+            alert(myVar);
+            </script>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +21,7 @@
 <body>
     <form action="index.php" method="post">
         <p>Enter String: <input type="text" name="string" id="string"></p>
+        <input type="submit" value="Reverse String" name="submit">
     </form>
 </body>
 </html>
